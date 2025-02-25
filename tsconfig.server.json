@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "outDir": "dist", // Output compiled files in "dist"
+    "rootDir": ".", // Treat the root directory as the source for both `server` and `shared`
+    "target": "ES2020", // Use modern JavaScript syntax
+    "module": "CommonJS", // Use ESM
+    "moduleResolution": "bundler", // Required for ES modules
+    "strict": true, // Enable strict type checking
+    "esModuleInterop": true, // Allow interop between ESM and CommonJS
+    "forceConsistentCasingInFileNames": true, // Enforce consistent import casing
+    "skipLibCheck": true, // Skip type checking for declaration files
+    "resolveJsonModule": true, // Allow importing JSON files
+    "noImplicitAny": true, // Disallow implicit any
+    "noUnusedLocals": true, // Error on unused local variables
+    "noUnusedParameters": true, // Error on unused function parameters
+    "noImplicitReturns": true, // Ensure all functions return a value
+    "allowJs": false, // Disallow JavaScript files in TypeScript compilation
+    "baseUrl": "./", // Base directory for module resolution
+    "paths": {
+      "*": ["server/*", "shared/*"] // Allow absolute imports
+    }
+  },
+  "include": ["server", "shared"], // Compile everything inside `server` and `shared`
+  "exclude": ["node_modules", "dist"] // Exclude unnecessary folders
+}
